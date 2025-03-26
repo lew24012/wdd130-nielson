@@ -41,8 +41,8 @@ nav img {
 }
 
 .center {
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 10%vh;
+    margin-right: 10%vh;
     background-color: white;
     padding-bottom: 1rem;
 }
