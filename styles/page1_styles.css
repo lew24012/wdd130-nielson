@@ -11,30 +11,58 @@ body {
     text-align: center;
 }
 
+/* Google Fonts 적용 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Chewy', sans-serif;
+}
+
+p {
+    font-family: 'Courgette', cursive;
+}
+
 /* 네비게이션 바 */
-.navbar, .footer-nav {
+.navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Keep elements spaced out */
     align-items: center;
     background-color: #48BF99;
     padding: 1rem;
 }
 
 .logo {
-    height: 40px;
-    width: auto;
+    height: 80px;
 }
 
-.home-btn {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
+/* Remove background from title */
 .title {
+    font-family: 'Chewy', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
     color: white;
-    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    flex-grow: 1;
+    text-align: center;
+    background-color: transparent; /* Removed background color */
+    margin-right: 1rem; /* Add gap between title and buttons */
+}
+
+/* Keep background for buttons */
+.home-btn, .page3-btn {
+    font-family: 'Chewy', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    padding: 0.5rem 1rem;
+    background-color: #3a9c7c;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-left: 1rem; /* Add gap between buttons */
+}
+
+.home-btn:hover, .page3-btn:hover {
+    background-color: #357d64;
+    transform: translateX(5px);
 }
 
 /* 히어로 이미지 */
@@ -45,7 +73,7 @@ body {
 }
 
 /* 콘텐츠 섹션 */
-.content {
+.content, .row {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,10 +82,8 @@ body {
 }
 
 .row {
-    display: flex;
-    align-items: center;
     width: 80%;
-    gap: 1rem;
+    flex-direction: row;
 }
 
 .small-img {
@@ -67,11 +93,13 @@ body {
     border-radius: 8px;
 }
 
+/* 텍스트 박스 스타일 */
 .text-box {
     flex-grow: 1;
     padding: 1rem;
     border-radius: 8px;
     min-height: 80px;
+    transition: all 0.3s ease;
 }
 
 .pink {
@@ -82,20 +110,69 @@ body {
     background-color: #FAD79F;
 }
 
-/* 푸터 섹션 */
-.footer-section {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    gap: 1rem;
+.text-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.long-box {
-    flex-grow: 1;
-    background-color: #F8AFA6;
-    padding: 1rem;
-    border-radius: 8px;
+.text-box:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 푸터 섹션 */
+.footer-nav {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    background-color: #48BF99;
+    padding: 1rem;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 1rem;
+}
+
+/* 📌 미디어 쿼리 추가 */
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .small-img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+    .hero img {
+        width: 80%;
+    }
+    .small-img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* 스마트폰 (480px 이하) */
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    .home-btn, .page3-btn {
+        font-size: 1.5rem;
+        padding: 0.3rem 0.8rem;
+    }
+    .small-img {
+        width: 100%;
+        height: auto;
+    }
 }
