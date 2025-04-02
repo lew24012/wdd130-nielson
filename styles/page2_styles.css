@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Atma:wght@300;400;500;600;700&family=Chewy&family=Courgette&family=Merienda:wght@300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #F8FA90;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #48BF99;
+}
+
+nav a {
+    text-decoration: none;
+    color: #F8FA90;
+    font-family: Chewy, sans-serif;
+    font-size: 1.5rem;
+}
+
+nav img {
+    height: 50px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+header h1 {
+    font-family: 'Courgette', sans-serif;
+    font-size: 2rem;
+    color: #1A8FE3;
+}
+
+/* Smoothie Section */
+#smoothie-section {
+    display: flex;
+    flex-direction: column; /* Stack the smoothie items vertically */
+    gap: 2rem; /* Add spacing between smoothie items */
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+#smoothie-section > p {
+    font-family: 'Courgette', sans-serif; /* Use the same font as inside smoothie-item */
+    font-size: 1rem;
+    color: #333; /* Dark text color for readability */
+    line-height: 1.5; /* Improve text readability */
+    text-align: left; /* Align text to the left */
+    margin-bottom: 1rem; /* Add spacing below the paragraph */
+}
+
+#smoothie-section .smoothie-item {
+    display: flex; /* Align image and text side by side */
+    align-items: center; /* Vertically align image and text */
+    background-color: #F0F0F0; /* Light background for each smoothie item */
+    padding: 1rem;
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    gap: 1rem; /* Add spacing between the image and text */
+}
+
+#smoothie-section .smoothie-item img {
+    width: 200px; /* Set a fixed width for the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+#smoothie-section .smoothie-item p {
+    flex: 1; /* Allow the text to take up the remaining space */
+    font-family: 'Courgette', sans-serif; /* Use a decorative font for text */
+    font-size: 1rem;
+    color: #333; /* Dark text color for readability */
+    line-height: 1.5; /* Improve text readability */
+    text-align: left; /* Align text to the left */
+}
+
+p {
+    font-family: 'Courgette', sans-serif; /* Use the same font as inside smoothie-item */
+    font-size: 1rem;
+    color: #333; /* Dark text color for readability */
+    line-height: 1.5; /* Improve text readability */
+    text-align: center; /* Center-align text for standalone paragraphs */
+    margin: 1rem auto; /* Add spacing around standalone paragraphs */
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #48BF99;
+}
+
+footer a {
+    text-decoration: none;
+    color: #F8FA90;
+    font-family: Chewy, sans-serif;
+    font-size: 1.5rem;
+}
+
+footer a:hover {
+    background-color: #1A8FE3;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #smoothie-section {
+        width: 95%;
+    }
+
+    #smoothie-section .smoothie-item {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+        text-align: center; /* Center-align text for smaller screens */
+    }
+
+    #smoothie-section .smoothie-item img {
+        width: 100%; /* Make the image responsive */
+        max-width: 300px; /* Limit the maximum width */
+        margin-bottom: 1rem; /* Add spacing below the image */
+    }
+
+    #smoothie-section .smoothie-item p {
+        text-align: center; /* Center-align text for smaller screens */
+    }
+
+    #smoothie-section > p {
+        text-align: center; /* Center-align text for smaller screens */
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav img {
+        height: 40px;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav img {
+        height: 30px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    footer a {
+        font-size: 1rem;
+    }
+}
