@@ -23,51 +23,76 @@ p {
 /* Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: flex-start; /* Align items to the left to bring them closer */
+    justify-content: space-between; /* Space between Home, Logo-Title, and Page 2 */
     align-items: center;
+    height: 10rem; /* Adjust as needed */
+    padding: 0 6rem;
     background-color: #48BF99;
-    padding: 0.5rem 1rem; /* Reduced padding for a more compact look */
-}
-
-.navbar .home-btn, .navbar .page3-btn {
-    font-family: 'Chewy', sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: white;
-    padding: 0.4rem 0.6rem; /* Reduced padding for a closer look */
-    background-color: #3a9c7c;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.3s ease;
 }
 
 /* Logo Styling */
-.logo {
-    height: 50px; /* Adjusted to make it smaller for a more balanced layout */
-    margin-right: 0.5rem; /* Reduced the margin to bring logo closer to the title */
+.navbar .logo {
+    height: 6rem; /* Adjust logo size to fit in the navbar */
+    width: auto; /* Maintain aspect ratio */
 }
 
-/* Title Styling in Navbar */
+/* Logo and Title Container */
+.navbar .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between logo and title */
+    text-align: center;
+}
+
+.navbar .logo-title img {
+    height: 8rem; /* Adjust logo size */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Title Styling */
 .navbar .title {
-    flex-grow: 1;
-    font-size: 1.8rem; /* Reduced font size for a more compact look */
-    color: white;
-    margin-left: 0.5rem; /* Reduced the left margin to bring the title closer */
+    font-family: 'Chewy', sans-serif;
+    font-size: 2.5rem; /* Slightly larger font size */
+    color: #F8FA90;
+    text-decoration: none;
+    margin: 0; /* Remove extra margin */
 }
 
-/* Optional: Adjust space between the buttons */
-.navbar .home-btn,
-.navbar .page3-btn {
-    margin-left: 0.5rem; /* Reduced margin between buttons */
+/* Navigation Links */
+.navbar .nav-links {
+    display: flex;
+    gap: 2rem; /* Space between navigation buttons */
+}
+
+/* Navigation Buttons */
+.navbar a {
+    text-decoration: none;
+    color: #F8FA90;
+    font-family: 'Chewy', sans-serif;
+    font-size: 1.7rem;
+    padding: 1rem 2rem; /* Adjust padding for better alignment */
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #1A8FE3; /* Hover background color */
+}
+
+/* Center Container */
+.center {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    background-color: white;
+    padding-bottom: 1rem;
 }
 
 /* Hero Section */
 .hero img {
-    width: 90%;
+    width: 100%; /* Ensure it spans the full width */
     max-width: 900px;
     height: auto;
     display: block;
-    margin: 1rem auto;
+    margin: 0 auto; /* Center the hero image */
 }
 
 /* Content Sections */
@@ -164,12 +189,24 @@ p {
     padding: 1rem;
 }
 
+/* Footer Logo Styling */
+.footer-nav .logo {
+    height: 4rem; /* Adjust the height to make the logo smaller */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 1rem; /* Add spacing between the logo and the link */
+}
+
+/* Footer Navigation Link */
 .footer-nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Chewy', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #F8FA90; /* Change color on hover */
 }
 
 .footer-container {
